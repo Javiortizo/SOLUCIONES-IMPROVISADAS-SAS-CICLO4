@@ -28,7 +28,7 @@ export class AutenticacionService {
     let claveCifrada = cryptoJS.MD5(clave).toString();
     return claveCifrada;
   }
-
+  //En este método se identifica el usuario por sus propiedades
   IdentificarUsuario(usuario:string, clave:string){
     try{
       let u = this.usuarioRepository.findOne({where:{email: usuario, clave: clave}})
@@ -40,6 +40,7 @@ export class AutenticacionService {
       return false;    
     } 
   }
+  // Se genera el token para cada usuario
   GenerarTokenJWT(usuario: Usuario){
     let token = jwt.sign({
       data:{
@@ -52,7 +53,7 @@ export class AutenticacionService {
     Llaves.claveJWT)
     return token;
   }
-
+  // Se valida el token para cada usuario
   ValidarTokenJWT(token:string){
     try{
       let datos = jwt.verify(token, Llaves.claveJWT);

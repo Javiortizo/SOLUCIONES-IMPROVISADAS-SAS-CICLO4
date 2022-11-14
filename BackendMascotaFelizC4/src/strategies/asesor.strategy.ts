@@ -8,13 +8,11 @@ import { AutenticacionService } from "../services";
 
 
 export class EstrategiaAsesor implements AuthenticationStrategy{
+    name: string = 'asesor';
     constructor(
         @service(AutenticacionService)
         public servicioAutenticacion: AutenticacionService
-    ){
-
-    }
-    name: string = 'asesor';
+    ){}    
     async authenticate(request: Request): Promise<UserProfile | undefined>{
         let token = parseBearerToken(request);
         if(token){

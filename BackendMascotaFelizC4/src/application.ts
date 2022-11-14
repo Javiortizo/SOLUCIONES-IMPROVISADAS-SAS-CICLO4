@@ -44,6 +44,7 @@ export class MascotaFelizApp extends BootMixin(
         nested: true,
       },
     };
+    // Aquí se agregan las estrategias de los diferentes roles
     registerAuthenticationStrategy(this, EstrategiaAdministrador);
     registerAuthenticationStrategy(this, EstrategiaAsesor);
     registerAuthenticationStrategy(this, EstrategiaCliente);
