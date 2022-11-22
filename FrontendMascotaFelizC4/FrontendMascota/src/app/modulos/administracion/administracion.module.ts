@@ -18,6 +18,10 @@ import { CrearSolicitudAfiComponent } from './solicitudesAfi/crear-solicitud-afi
 import { BuscarSolicitudAfiComponent } from './solicitudesAfi/buscar-solicitud-afi/buscar-solicitud-afi.component';
 import { EditarSolicitudAfiComponent } from './solicitudesAfi/editar-solicitud-afi/editar-solicitud-afi.component';
 import { EliminarSolicitudAfiComponent } from './solicitudesAfi/eliminar-solicitud-afi/eliminar-solicitud-afi.component';
+import { CrearProspectoComponent } from './prospectos/crear-prospecto/crear-prospecto.component';
+import { BuscarProspectoComponent } from './prospectos/buscar-prospecto/buscar-prospecto.component';
+import { EditarProspectoComponent } from './prospectos/editar-prospecto/editar-prospecto.component';
+import { EliminarProspectoComponent } from './prospectos/eliminar-prospecto/eliminar-prospecto.component';
 
 
 @NgModule({
@@ -37,7 +41,11 @@ import { EliminarSolicitudAfiComponent } from './solicitudesAfi/eliminar-solicit
     CrearSolicitudAfiComponent,
     BuscarSolicitudAfiComponent,
     EditarSolicitudAfiComponent,
-    EliminarSolicitudAfiComponent
+    EliminarSolicitudAfiComponent,
+    CrearProspectoComponent,
+    BuscarProspectoComponent,
+    EditarProspectoComponent,
+    EliminarProspectoComponent
   ],
   imports: [
     CommonModule,
