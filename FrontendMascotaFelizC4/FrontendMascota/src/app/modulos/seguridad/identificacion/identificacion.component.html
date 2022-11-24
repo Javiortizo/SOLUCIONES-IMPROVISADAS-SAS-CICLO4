@@ -1,1 +1,68 @@
-<p>identificacion works!</p>
+<body ng-app="mainModule" ng-controller="mainController">
+    <div id="login-page" class="row">
+        <div class="col s12 z-depth-6 card-panel">
+            <!-- Se vincula el formGroup con fgValidador para que realice la validación de cada uno de los campos del formulario -->
+            <form class="login-form" [formGroup]="fgValidador" (ngSubmit)="IdentificarUsuario()">
+                <div class="container">
+                <!-- Se llama a la función cuando se da clic en el botón del formulario -->
+                <div class="row">
+                    <h4 class="card-title center-align">Identificación de Usuarios</h4>
+                </div>
+                <div class="row">
+                    <div class="input-field col s10">
+                        <i class="material-icons prefix">mail_outline</i>
+                        <!-- Se utiliza formControlName en cada uno de los campos para enlazarlo con el fgValidador -->
+                        <input formControlName="usuario" class="validate" id="email" type="email">
+                        <label for="email" data-error="wrong" data-success="right">Usuario</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s10">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <input formControlName="clave" id="password" type="password">
+                        <label for="password">Contraseña</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m12 l12  login-text">
+                        <label>
+                        <input type="checkbox" id="remember-me"/>
+                        
+                        <span>Recuérdame</span>
+                    </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <br>
+                    <div class="center-align s4">
+                        <!-- Se dedactiva botón si el formulario no ha cumplido con las validaciones del fgValidador -->
+                        <button [disabled]="!fgValidador.valid" class="btn waves-effect waves-light col s12 center"
+                            type="submit" name="action">Ingresar<i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 m6 l6">
+                        <p class="margin medium-small"><a href="#">Regístrate Ahora!</a></p>
+                    </div>
+                    <div class="input-field col s6 m6 l6">
+                        <p class="margin right-align medium-small"><a href="#">Recuperar Contraseña</a></p>
+                    </div>
+                </div>
+                </div>
+                <!-- js -->
+                <!-- var app = angular.module('mainModule', []);
+
+                app.controller('mainController', function($scope, $http){ //o scope liga o js e o template
+                $scope.nome = 'Valor Inicial';
+                //$http.get().success();
+                $scope.reset = function()
+                {
+                $scope.nome = '';
+                }
+                }); -->
+
+            </form>
+        </div>
+    </div>
+</body>

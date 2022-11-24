@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BuscarProductoPlanComponent } from './productos-planes/buscar-producto-plan/buscar-producto-plan.component';
-import { CrearProductoPlanComponent } from './productos-planes/crear-producto-plan/crear-producto-plan.component';
-import { EditarProductoPlanComponent } from './productos-planes/editar-producto-plan/editar-producto-plan.component';
-import { EliminarProductoPlanComponent } from './productos-planes/eliminar-producto-plan/eliminar-producto-plan.component';
+import { BuscarPlanComponent } from './planes/buscar-plan/buscar-plan.component';
+import { CrearPlanComponent } from './planes/crear-plan/crear-plan.component';
+import { EditarPlanComponent } from './planes/editar-plan/editar-plan.component';
+import { EliminarPlanComponent } from './planes/eliminar-plan/eliminar-plan.component';
+import { BuscarProductoServicioComponent } from './productos-servicios/buscar-producto-servicio/buscar-producto-servicio.component';
+import { CrearProductoServicioComponent } from './productos-servicios/crear-producto-servicio/crear-producto-servicio.component';
+import { EditarProductoServicioComponent } from './productos-servicios/editar-producto-servicio/editar-producto-servicio.component';
+import { EliminarProductoServicioComponent } from './productos-servicios/eliminar-producto-servicio/eliminar-producto-servicio.component';
 import { BuscarProspectoComponent } from './prospectos/buscar-prospecto/buscar-prospecto.component';
 import { CrearProspectoComponent } from './prospectos/crear-prospecto/crear-prospecto.component';
 import { EditarProspectoComponent } from './prospectos/editar-prospecto/editar-prospecto.component';
@@ -39,22 +43,22 @@ const routes: Routes = [
     path: 'eliminar-usuario',
     component: EliminarUsuarioComponent
   },
-  // Enrutamiento CRUD Productos - Planes
+  // Enrutamiento CRUD Productos - Servicios
   {
-    path: 'crear-producto-plan',
-    component: CrearProductoPlanComponent
+    path: 'crear-producto-servicio',
+    component: CrearProductoServicioComponent
   },
   {
-    path: 'editar-producto-plan',
-    component: EditarProductoPlanComponent
+    path: 'editar-producto-servicio/:id',
+    component: EditarProductoServicioComponent
   },
   {
-    path: 'buscar-producto-plan',
-    component: BuscarProductoPlanComponent
+    path: 'buscar-producto-servicio',
+    component: BuscarProductoServicioComponent
   },
   {
-    path: 'eliminar-producto-plan',
-    component: EliminarProductoPlanComponent
+    path: 'eliminar-producto-servicio',
+    component: EliminarProductoServicioComponent
   },
   // Enrutamiento CRUD Solicitudes - Afiliaciones
   {
@@ -106,6 +110,23 @@ const routes: Routes = [
   {
     path: 'eliminar-prospecto',
     component: EliminarProspectoComponent
+  },
+  // Entrutamiento CRUD Planes
+  {
+    path: 'crear-plan',
+    component: CrearPlanComponent
+  },
+  {
+    path: 'editar-plan',
+    component: EditarPlanComponent
+  },
+  {
+    path: 'buscar-plan',
+    component: BuscarPlanComponent
+  },
+  {
+    path: 'eliminar-plan',
+    component: EliminarPlanComponent
   }
 
 ];
