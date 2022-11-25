@@ -1,1 +1,42 @@
-<p>editar-usuario works!</p>
+<div class="row">
+    <h3 class="center-align">Editar Usuario</h3>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="EditarUsuario()" method="POST">
+            <input type="hidden" formControlName="id">
+            <div class="input-field">
+                <label for="tipo" class="active">Cédula</label>
+                <input formControlName="cedula" type="text" name="cedula" required>
+            </div>
+            <div class="input-field">
+                <label for="nombres" class="active">Nombres</label>
+                <input formControlName="nombres" type="text" name="nombres" required>
+            </div>
+            <div class="input-field">
+                <label for="apellidos" class="active">Apellidos</label>
+                <input formControlName="apellidos" type="text" name="apellidos" required>
+            </div>
+            <div class="input-field">
+                <label for="telefono" class="active">Teléfono</label>
+                <input formControlName="telefono" type="text" name="telefono" required>
+            </div>
+            <div class="input-field">
+                <label for="email" class="active">Email</label>
+                <input formControlName="email" type="text" name="email" required>
+            </div>
+            <label>Rol</label>
+            <div class="input-field">
+                <select formControlName="rol"class="browser-default">
+                    <!-- <option value="" disabled selected>Elige un rol</option> -->
+                    <option value="Administrador">Administrador</option>
+                    <option value="Asesor">Asesor</option>
+                    <option value="Cliente">Cliente</option>
+                </select>
+            </div>
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn left" type="submit"><i
+                        class="material-icons right">send</i>Editar Usuario</button>
+                <a routerLink="/administracion/buscar-usuario" class="btn right">Cancelar</a>
+            </p>
+        </form>
+    </article>
+</div>

@@ -32,7 +32,7 @@ const routes: Routes = [
     component: CrearUsuarioComponent
   },
   {
-    path: 'editar-usuario',
+    path: 'editar-usuario/:id',
     component: EditarUsuarioComponent
   },
   {
@@ -66,7 +66,7 @@ const routes: Routes = [
     component: CrearSolicitudAfiComponent
   },
   {
-    path: 'editar-solicitud-afi',
+    path: 'editar-solicitud-afi/:id',
     component: EditarSolicitudAfiComponent
   },
   {
@@ -83,7 +83,7 @@ const routes: Routes = [
     component: CrearSucursalComponent
   },
   {
-    path: 'editar-sucursal',
+    path: 'editar-sucursal/:id',
     component: EditarSucursalComponent
   },
   {
@@ -100,7 +100,7 @@ const routes: Routes = [
     component: CrearProspectoComponent
   },
   {
-    path: 'editar-prospecto',
+    path: 'editar-prospecto/:id',
     component: EditarProspectoComponent
   },
   {
@@ -117,7 +117,7 @@ const routes: Routes = [
     component: CrearPlanComponent
   },
   {
-    path: 'editar-plan',
+    path: 'editar-plan/:id',
     component: EditarPlanComponent
   },
   {
