@@ -1,1 +1,34 @@
-<p>editar-prospecto works!</p>
+<div class="row">
+    <h3 class="center-align">Editar Prospecto</h3>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="EditarProspecto()" method="POST">
+            <input type="hidden" formControlName="id">            
+            <div class="input-field">
+                <label for="nombres" class="active">Nombres</label>
+                <input formControlName="nombres" type="text" name="nombres" required>
+            </div>
+            <div class="input-field">
+                <label for="apellidos" class="active">Apellidos</label>
+                <input formControlName="apellidos" type="text" name="apellidos" required>
+            </div>           
+            <div class="input-field">
+                <label for="email" class="active">Email</label>
+                <input formControlName="email" type="email" name="email" required>
+            </div>
+            <div class="input-field">
+                <label for="telefono" class="active">Teléfono</label>
+                <input formControlName="telefono" type="text" name="telefono" required>
+            </div>
+            <div class="input-field">
+                <label for="comentario" class="active">Comentario</label>
+                <input formControlName="comentario" type="text" name="comentario" required>
+            </div>
+            
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn left" type="submit"><i
+                        class="material-icons right">send</i>Editar Prospecto</button>
+                <a routerLink="/administracion/buscar-prospecto" class="btn right">Cancelar</a>
+            </p>
+        </form>
+    </article>
+</div>

@@ -2,9 +2,13 @@
     <h3 class="center-align">Crear Productos y Servicios</h3>
     <article class="col s6 offset-s3">
         <form [formGroup]="fgValidador" (ngSubmit)="GuardarProductoServicio()" method="POST">
+            <label for="tipo">Tipo</label>
             <div class="input-field">
-                <label for="tipo">Tipo</label>
-                <input formControlName="tipo" type="text" name="tipo" required>
+                <select formControlName="tipo"class="browser-default">                    
+                    <!-- <option value="" disabled selected>Elige un tipo</option> -->
+                    <option value="Producto">Producto</option>
+                    <option value="Servicio">Servicio</option>                   
+                </select>            
             </div>
             <div class="input-field">
                 <label for="nombre">Nombre</label>

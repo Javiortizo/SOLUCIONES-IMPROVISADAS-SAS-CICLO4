@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmailValidator, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ModeloUsuario } from 'src/app/modelos/usuario.modelo';
 import { UsuarioService } from 'src/app/servicios/usuario.service';
@@ -15,7 +15,7 @@ export class CrearUsuarioComponent implements OnInit {
     'nombres': ['',[Validators.required]],
     'apellidos': ['',[Validators.required]],
     'telefono': ['',[Validators.required]],
-    'email': ['',[Validators.required]],
+    'email': ['',[Validators.required, Validators.email]],
     'rol': ['',[Validators.required]],
   })
 

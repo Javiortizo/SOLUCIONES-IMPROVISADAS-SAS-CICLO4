@@ -1,1 +1,37 @@
-<p>buscar-sucursal works!</p>
+<a routerLink="/administracion/crear-sucursal" class="btn">Crear Sucursal</a>
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>Departamento</th>
+            <th>Ciudad</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>           
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let registro of listadoRegistros">
+            <td>
+                {{registro.departamento}}
+            </td>
+            <td>
+                {{registro.ciudad}}
+            </td>
+            <td>
+                {{registro.direccion}}
+            </td>
+            <td>
+                {{registro.telefono}}
+            </td>           
+            <td>
+                <a routerLink="/administracion/editar-sucursal/{{registro.id}}" class="btn">Editar Sucursal</a>
+            </td>
+            <td>
+                <a class="btn" (click)="EliminarSucursal(registro.id!)">Eliminar Sucursal</a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
